@@ -7,5 +7,7 @@ set shiftwidth=4
 set expandtab
 set autoindent
 
+set hidden
+
 syntax on
 filetype plugin indent on
