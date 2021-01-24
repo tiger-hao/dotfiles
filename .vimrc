@@ -14,7 +14,6 @@ nnoremap <silent> <C-l> :nohlsearch<CR>
 set scrolloff=5
 set sidescroll=1
 set sidescrolloff=5
-set laststatus=2
 set wildmenu
 set ruler
 set nowrap
@@ -25,6 +24,9 @@ filetype plugin indent on
 
 call plug#begin('~/.vim/bundle')
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 nnoremap <C-t> :NERDTreeToggle<CR>
@@ -33,3 +35,6 @@ nnoremap <C-f> :NERDTreeFind<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
     \ execute 'NERDTree' argv()[0] | wincmd p | enew | wincmd p | execute 'cd '.argv()[0] | endif
+
+let g:airline_theme='minimalist'
+let g:airline_powerline_fonts = 1
