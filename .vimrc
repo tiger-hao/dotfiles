@@ -9,7 +9,7 @@ set autoindent
 
 set incsearch
 set hlsearch
-nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
+nnoremap <silent> <C-l> :nohlsearch<CR>
 
 set scrolloff=5
 set sidescroll=1
