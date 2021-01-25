@@ -1,5 +1,5 @@
 # oh-my-zsh setup
-export ZSH="/home/tiger/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="agnoster"
 
 plugins=(git)
