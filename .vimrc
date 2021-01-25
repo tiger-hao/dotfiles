@@ -15,9 +15,10 @@ set scrolloff=5
 set sidescroll=1
 set sidescrolloff=5
 set wildmenu
-set ruler
 set nowrap
 set hidden
+
+set path=$PWD/**
 
 syntax on
 filetype plugin indent on
