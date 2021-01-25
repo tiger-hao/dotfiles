@@ -28,6 +28,8 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
 nnoremap <C-t> :NERDTreeToggle<CR>
@@ -39,3 +41,4 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in
 
 let g:airline_theme='minimalist'
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
