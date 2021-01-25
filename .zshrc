@@ -6,6 +6,9 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+# alias
+alias ghist="git log --follow -p --stat --"
+
 # env
 export VISUAL=vim
 export EDITOR="$VISUAL"
