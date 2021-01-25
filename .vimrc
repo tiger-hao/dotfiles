@@ -1,6 +1,7 @@
+syntax enable
 set background=dark
+colorscheme solarized
 set number
-highlight LineNr ctermfg=darkgrey
 
 set tabstop=4
 set shiftwidth=4
@@ -20,7 +21,6 @@ set hidden
 
 set path=$PWD/**
 
-syntax on
 filetype plugin indent on
 
 call plug#begin('~/.vim/bundle')
