@@ -8,6 +8,8 @@ set shiftwidth=4
 set expandtab
 set autoindent
 
+autocmd FileType ruby,eruby,typescriptreact setlocal shiftwidth=2 tabstop=2
+
 set incsearch
 set hlsearch
 nnoremap <silent> <C-l> :nohlsearch<CR>
@@ -17,9 +19,12 @@ set sidescroll=1
 set sidescrolloff=5
 set wildmenu
 set nowrap
+
 set hidden
+set splitright
 
 set path=$PWD/**
+set backspace=indent,eol,start
 
 filetype plugin indent on
 
@@ -29,7 +34,10 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-unimpaired'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'valloric/youcompleteme'
 call plug#end()
 
 nnoremap <C-t> :NERDTreeToggle<CR>
