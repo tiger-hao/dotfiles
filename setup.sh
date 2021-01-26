@@ -9,7 +9,7 @@ mkdir -p ~/.vim/colors && cp vim-colors-solarized/colors/solarized.vim ~/.vim/co
 rm -rf vim-colors-solarized
 
 git clone https://github.com/seebi/tmux-colors-solarized.git
-cat tmux-colors-solarized/tmuxcolors-base16.conf >> ~/.tmux.conf
+cat tmux-colors-solarized/tmuxcolors-256.conf >> ~/.tmux.conf
 rm -rf tmux-colors-solarized
 
 exec $SHELL
