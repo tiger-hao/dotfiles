@@ -45,7 +45,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
-nnoremap <silent> <C-e> :NERDTreeToggle<CR>
+nnoremap <silent> <C-h> :NERDTreeToggle<CR>
 nnoremap <silent> <C-g> :NERDTreeFind<CR>
 " Start NERDTree when Vim starts with a directory argument.
 autocmd StdinReadPre * let s:std_in=1
@@ -56,6 +56,7 @@ let g:airline_theme='minimalist'
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled=1
 
+let $FZF_DEFAULT_COMMAND='rg --hidden --no-ignore --files -g "!.git"'
 nnoremap <silent> <expr> <C-p> (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>": '').":FZF\<CR>"
 nnoremap <silent> <expr> <C-f> (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>": '').":Rg\<CR>"
 
