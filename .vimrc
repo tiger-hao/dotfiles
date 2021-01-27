@@ -1,7 +1,26 @@
-syntax enable
-set background=dark
-colorscheme solarized
+call plug#begin()
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-commentary'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#end()
+
+syntax on
+filetype plugin indent on
 set number
+set hidden
+set splitright
+
+set path=$PWD/**
+set backspace=indent,eol,start
 
 set tabstop=4
 set shiftwidth=4
@@ -23,28 +42,6 @@ set sidescrolloff=5
 set wildmenu
 set nowrap
 
-set hidden
-set splitright
-
-set path=$PWD/**
-set backspace=indent,eol,start
-
-filetype plugin indent on
-
-call plug#begin('~/.vim/bundle')
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-commentary'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-call plug#end()
-
 nnoremap <silent> <C-h> :NERDTreeToggle<CR>
 nnoremap <silent> <C-g> :NERDTreeFind<CR>
 " Start NERDTree when Vim starts with a directory argument.
@@ -52,9 +49,16 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
       \ execute 'NERDTree' argv()[0] | wincmd p | enew | wincmd p | execute 'cd '.argv()[0] | endif
 
-let g:airline_theme='minimalist'
+colorscheme onehalfdark
+let g:airline_theme='onehalfdark'
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled=1
+
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
 
 let $FZF_DEFAULT_COMMAND='rg --hidden --no-ignore --files -g "!.git"'
 nnoremap <silent> <expr> <C-p> (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>": '').":FZF\<CR>"
