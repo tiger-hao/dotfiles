@@ -42,8 +42,8 @@ set sidescrolloff=5
 set wildmenu
 set nowrap
 
-nnoremap <silent> <C-h> :NERDTreeToggle<CR>
-nnoremap <silent> <C-g> :NERDTreeFind<CR>
+nnoremap <silent> <C-n> :NERDTreeToggle<CR>
+nnoremap <silent> <C-h> :NERDTreeFind<CR>
 " Start NERDTree when Vim starts with a directory argument.
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
