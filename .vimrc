@@ -11,6 +11,8 @@ Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'jparise/vim-graphql'
 call plug#end()
 
 syntax on
