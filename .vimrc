@@ -26,7 +26,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set autoindent
-autocmd FileType eruby,json,ruby,typescriptreact,vim setlocal shiftwidth=2 tabstop=2
+autocmd FileType eruby,javascriptreact,json,ruby,typescriptreact,vim setlocal shiftwidth=2 tabstop=2
 
 let mapleader=','
 nnoremap <leader>q :copen<CR>
