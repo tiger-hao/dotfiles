@@ -1,0 +1,10 @@
+[user]
+	name = Tiger Hao
+
+[core]
+	excludesFile = ~/.gitignore
+    pager = delta
+
+[delta]
+    syntax-theme = OneHalfDark
+    side-by-side = true
