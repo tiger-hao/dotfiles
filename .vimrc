@@ -12,6 +12,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+Plug 'vim-python/python-syntax'
 Plug 'jparise/vim-graphql'
 call plug#end()
 
@@ -85,6 +86,8 @@ xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 let g:coc_disable_transparent_cursor=1
 let g:coc_global_extensions = ['coc-css', 'coc-html', 'coc-json', 'coc-python', 'coc-tsserver']
+
+let g:python_highlight_all = 1
 
 " WSL yank support
 let s:clip = '/mnt/c/Windows/System32/clip.exe'
