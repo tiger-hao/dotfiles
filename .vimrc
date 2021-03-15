@@ -13,7 +13,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'vim-python/python-syntax'
-Plug 'jparise/vim-graphql'
+" Plug 'jparise/vim-graphql'
+" Plug 'vim-ruby/vim-ruby'
+" Plug 'tpope/vim-rails'
 call plug#end()
 
 syntax on
