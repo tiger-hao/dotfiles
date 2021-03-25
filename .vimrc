@@ -13,6 +13,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'vim-python/python-syntax'
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'maxmellon/vim-jsx-pretty'
 " Plug 'jparise/vim-graphql'
 " Plug 'vim-ruby/vim-ruby'
 " Plug 'tpope/vim-rails'
@@ -31,7 +34,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set autoindent
-autocmd FileType eruby,javascriptreact,json,ruby,typescriptreact,vim setlocal shiftwidth=2 tabstop=2
+autocmd FileType eruby,javascript,javascriptreact,json,ruby,typescript,typescriptreact,vim setlocal shiftwidth=2 tabstop=2
 
 let mapleader=','
 nnoremap <leader>q :copen<CR>
