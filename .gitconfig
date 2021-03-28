@@ -1,8 +1,8 @@
 [user]
-	name = Tiger Hao
+    name = Tiger Hao
 
 [core]
-	excludesFile = ~/.gitignore
+    excludesFile = ~/.gitignore
     pager = delta
 
 [delta]
