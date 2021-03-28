@@ -16,6 +16,7 @@ Plug 'vim-python/python-syntax'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'alvan/vim-closetag'
 " Plug 'jparise/vim-graphql'
 " Plug 'vim-ruby/vim-ruby'
 " Plug 'tpope/vim-rails'
@@ -97,6 +98,8 @@ let g:coc_disable_transparent_cursor=1
 let g:coc_global_extensions = ['coc-css', 'coc-html', 'coc-json', 'coc-python', 'coc-tsserver']
 
 let g:python_highlight_all = 1
+let g:closetag_filetypes = 'html,xhtml,phtml,javascriptreact,typescriptreact'
+let g:closetag_close_shortcut = '<leader>>'
 
 " WSL yank support
 let s:clip = '/mnt/c/Windows/System32/clip.exe'
