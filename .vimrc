@@ -68,7 +68,7 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-let $FZF_DEFAULT_COMMAND='rg --hidden --no-ignore --files -g "!.git"'
+let $FZF_DEFAULT_COMMAND='rg --hidden --files -g "!.git"'
 nnoremap <silent> <expr> <C-p> (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>": '').":FZF\<CR>"
 nnoremap <silent> <expr> <C-f> (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>": '').":Rg\<CR>"
 
