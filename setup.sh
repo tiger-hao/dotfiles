@@ -4,3 +4,5 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 
 cat vim.gitignore >> ~/.gitignore
 cat .gitconfig >> ~/.gitconfig
+
+exec $SHELL
