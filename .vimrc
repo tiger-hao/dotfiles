@@ -8,6 +8,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
+Plug 'alvan/vim-closetag'
+Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -16,7 +18,6 @@ Plug 'vim-python/python-syntax'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'alvan/vim-closetag'
 " Plug 'jparise/vim-graphql'
 " Plug 'vim-ruby/vim-ruby'
 " Plug 'tpope/vim-rails'
@@ -98,6 +99,7 @@ let g:coc_disable_transparent_cursor=1
 let g:coc_global_extensions = ['coc-css', 'coc-eslint', 'coc-html', 'coc-json', 'coc-python', 'coc-tsserver']
 
 let g:python_highlight_all = 1
+let g:AutoPairsCenterLine = 0
 let g:closetag_filetypes = 'html,xhtml,phtml,javascriptreact,typescriptreact'
 let g:closetag_close_shortcut = '<leader>>'
 
