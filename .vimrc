@@ -112,6 +112,7 @@ let g:coc_global_extensions = ['coc-css', 'coc-eslint', 'coc-html', 'coc-json', 
 
 let g:python_highlight_all = 1
 let g:AutoPairsCenterLine = 0
+let g:AutoPairsMultilineClose = 0
 let g:closetag_filetypes = 'html,xhtml,phtml,javascriptreact,typescriptreact'
 let g:closetag_close_shortcut = '<leader>>'
 
