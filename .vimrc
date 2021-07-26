@@ -44,6 +44,8 @@ nnoremap <leader>l :lopen<CR>
 
 set incsearch
 set hlsearch
+set ignorecase
+set smartcase
 nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
 
 set scrolloff=5
