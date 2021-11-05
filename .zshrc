@@ -20,10 +20,6 @@ alias ghist="git log --follow -p --stat --"
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-# WSL X forwarding
-export DISPLAY=$(ip route | awk '/^default/{print $3; exit}'):0
-export LIBGL_ALWAYS_INDIRECT=1
-
 # WSL specific
 export LS_COLORS="$LS_COLORS:ow=1;34"
 echo -e "\e[2 q"
