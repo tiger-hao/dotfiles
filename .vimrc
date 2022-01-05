@@ -110,7 +110,7 @@ nmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>ac  <Plug>(coc-codeaction)
 nmap <leader>qf  <Plug>(coc-fix-current)
 let g:coc_disable_transparent_cursor=1
-let g:coc_global_extensions = ['coc-clangd', 'coc-css', 'coc-eslint', 'coc-html', 'coc-java', 'coc-json', 'coc-python', 'coc-tsserver']
+let g:coc_global_extensions = ['coc-clangd', 'coc-css', 'coc-eslint', 'coc-html', 'coc-java', 'coc-json', 'coc-python', 'coc-rust-analyzer', 'coc-tsserver']
 
 let g:python_highlight_all = 1
 let g:closetag_filetypes = 'html,xhtml,phtml,javascriptreact,typescriptreact'
