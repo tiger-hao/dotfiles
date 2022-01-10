@@ -7,6 +7,7 @@ plugins=(
   docker-compose
   git
   ruby
+  rust
   tmux
   yarn
 )
