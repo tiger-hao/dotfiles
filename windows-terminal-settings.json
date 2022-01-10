@@ -33,7 +33,8 @@
             "cursorShape": "filledBox",
             "fontFace": "Source Code Pro for Powerline",
             "fontSize": 11,
-            "colorScheme": "One Half Dark"
+            "colorScheme": "One Half Dark",
+            "bellStyle": "none"
         },
         "list":
         [
