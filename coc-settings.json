@@ -6,7 +6,9 @@
     "typescript",
     "typescriptreact"
   ],
+  "python.pythonPath": "python3",
   "python.formatting.autopep8Args": [
     "--max-line-length=120"
-  ]
+  ],
+  "python.linting.flake8Enabled": true
 }
