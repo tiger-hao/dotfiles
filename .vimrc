@@ -14,6 +14,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'lervag/vimtex'
 Plug 'vim-python/python-syntax'
 Plug 'rust-lang/rust.vim'
 Plug 'pangloss/vim-javascript'
@@ -39,7 +40,7 @@ set expandtab
 set autoindent
 autocmd FileType eruby,javascript,javascriptreact,json,ruby,typescript,typescriptreact,vim setlocal shiftwidth=2 tabstop=2
 
-let mapleader=','
+let mapleader = ','
 nnoremap <leader>q :copen<CR>
 nnoremap <leader>l :lopen<CR>
 
@@ -63,9 +64,9 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in
       \ execute 'NERDTree' argv()[0] | wincmd p | enew | wincmd p | execute 'cd '.argv()[0] | endif
 
 colorscheme onehalfdark
-let g:airline_theme='onehalfdark'
-let g:airline_powerline_fonts=1
-let g:airline#extensions#tabline#enabled=1
+let g:airline_theme = 'onehalfdark'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -73,7 +74,7 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-let $FZF_DEFAULT_COMMAND='rg --hidden --files -g "!.git"'
+let $FZF_DEFAULT_COMMAND = 'rg --hidden --files -g "!.git"'
 nnoremap <silent> <expr> <C-p> (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>": '').":FZF\<CR>"
 nnoremap <silent> <expr> <C-f> (expand('%') =~ 'NERD_tree' ? "\<C-w>\<C-w>": '').":Rg\<CR>"
 
@@ -85,6 +86,8 @@ endfunction
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
+  elseif &filetype ==# 'tex'
+    VimtexDocPackage
   elseif (coc#rpc#ready())
     call CocActionAsync('doHover')
   else
@@ -109,12 +112,14 @@ xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>ac  <Plug>(coc-codeaction)
 nmap <leader>qf  <Plug>(coc-fix-current)
-let g:coc_disable_transparent_cursor=1
-let g:coc_global_extensions = ['coc-clangd', 'coc-css', 'coc-eslint', 'coc-html', 'coc-java', 'coc-json', 'coc-pyright', 'coc-rust-analyzer', 'coc-tsserver']
+let g:coc_disable_transparent_cursor = 1
+let g:coc_global_extensions = ['coc-clangd', 'coc-css', 'coc-eslint', 'coc-html', 'coc-java', 'coc-json', 'coc-pyright', 'coc-rust-analyzer', 'coc-tsserver', 'coc-vimtex']
 
 let g:python_highlight_all = 1
 let g:closetag_filetypes = 'html,xhtml,phtml,javascriptreact,typescriptreact'
 let g:closetag_close_shortcut = '<leader>>'
+
+let g:vimtex_view_general_viewer = 'sumatraPDF'
 
 " WSL yank support
 let s:clip = '/mnt/c/Windows/System32/clip.exe'
